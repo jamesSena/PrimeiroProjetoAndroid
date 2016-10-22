@@ -5,28 +5,29 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.Toast;
 
 import br.sp.senai.imformatica.afazer.R;
 
 public class AFazerActivity extends AppCompatActivity implements View.OnClickListener{
 
-    private EditText edtTitulo;
+    private EditText edTitulo;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_afazer);
-        edtTitulo = (EditText)findViewById(R.id.editText);
-        Button btSalvar = (Button)findViewById(R.id.btnSalvar);
-        btSalvar.setOnClickListener(this);
+        edTitulo = (EditText)findViewById(R.id.editText);
+        ListView listView = (ListView)findViewById(R.id.listView);
+        listView.setAdapter(new DetalheItem());
     }
 
     //Implementa o método de View.OnClickListener
     @Override
     public void onClick(View view) {
-        String titulo = edtTitulo.getText().toString();
-        Toast.makeText(getApplicationContext(), "O Titulo digitado foi" + titulo, Toast.LENGTH_LONG).show();
-        edtTitulo.setText("");
+
     }
 }

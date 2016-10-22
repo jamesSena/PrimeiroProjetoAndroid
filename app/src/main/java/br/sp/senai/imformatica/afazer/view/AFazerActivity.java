@@ -11,13 +11,13 @@ import br.sp.senai.imformatica.afazer.R;
 
 public class AFazerActivity extends AppCompatActivity implements View.OnClickListener{
 
-    private EditText edTitulo;
+    private EditText edtTitulo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_afazer);
-        edTitulo = (EditText)findViewById(R.id.editText);
+        edtTitulo = (EditText)findViewById(R.id.editText);
         Button btSalvar = (Button)findViewById(R.id.btnSalvar);
         btSalvar.setOnClickListener(this);
     }
@@ -25,8 +25,8 @@ public class AFazerActivity extends AppCompatActivity implements View.OnClickLis
     //Implementa o método de View.OnClickListener
     @Override
     public void onClick(View view) {
-        String titulo = edTitulo.getText().toString();
+        String titulo = edtTitulo.getText().toString();
         Toast.makeText(getApplicationContext(), "O Titulo digitado foi" + titulo, Toast.LENGTH_LONG).show();
-        edTitulo.setText("");
+        edtTitulo.setText("");
     }
 }

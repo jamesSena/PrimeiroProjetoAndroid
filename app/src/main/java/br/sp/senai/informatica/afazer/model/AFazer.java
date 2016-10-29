@@ -1,4 +1,4 @@
-package br.sp.senai.imformatica.afazer.model;
+package br.sp.senai.informatica.afazer.model;
 
 import java.util.ArrayList;
 import java.util.List;

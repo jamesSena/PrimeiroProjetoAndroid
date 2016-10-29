@@ -1,4 +1,4 @@
-package br.sp.senai.imformatica.afazer.model;
+package br.sp.senai.informatica.afazer.model;
 
 /**
  * Created by Android1 on 15/10/2016.
@@ -6,13 +6,13 @@ package br.sp.senai.imformatica.afazer.model;
 
 public class Item{
     private Long id;
-    private String titulo;
+    private String descricao;
     private boolean concluido;
 
     public Item() {
     }
-    public Item(Long id ,String titulo) {
-        this.titulo = titulo;
+    public Item(Long id ,String descricao) {
+        this.descricao = descricao;
         this.id = id;
     }
 
@@ -22,12 +22,12 @@ public class Item{
         this.id = id;
     }
 
-    public String getTitulo() {
-        return titulo;
+    public String getDescricao() {
+        return descricao;
     }
 
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
     }
 
     public boolean isConcluido() { return concluido;}
@@ -40,7 +40,7 @@ public class Item{
         return "Item{" +
                 "concluido=" + concluido +
                 ", id=" + id +
-                ", titulo='" + titulo + '\'' +
+                ", descricao='" + descricao + '\'' +
                 '}';
     }
 }

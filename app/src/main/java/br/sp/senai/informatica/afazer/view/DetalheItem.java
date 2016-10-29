@@ -1,4 +1,4 @@
-package br.sp.senai.imformatica.afazer.view;
+package br.sp.senai.informatica.afazer.view;
 
 import android.content.Context;
 import android.support.constraint.ConstraintLayout;
@@ -16,7 +16,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import br.sp.senai.imformatica.afazer.R;
-import br.sp.senai.imformatica.afazer.model.Item;
+import br.sp.senai.informatica.afazer.model.Item;
 
 /**
  * Created by Android1 on 22/10/2016.
@@ -80,7 +80,7 @@ public class DetalheItem extends BaseAdapter implements  View.OnClickListener {
         checkBox.setTag(obj.getId());
 
         TextView textView = (TextView) layout.findViewById(R.id.tvTitulo);
-        textView.setText(obj.getTitulo());
+        textView.setText(obj.getDescricao());
         ImageButton imageButton = (ImageButton)layout.findViewById(R.id.btDel);
         imageButton.setOnClickListener(this);
         imageButton.setTag(obj.getId());

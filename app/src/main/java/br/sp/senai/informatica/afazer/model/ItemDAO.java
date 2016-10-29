@@ -1,4 +1,4 @@
-package br.sp.senai.imformatica.afazer.model;
+package br.sp.senai.informatica.afazer.model;
 
 import android.util.Log;
 
@@ -24,7 +24,7 @@ public class ItemDAO {
             Item obj = localizar(item.getId());
             if(obj != null){
                 obj.setConcluido(item.isConcluido());
-                obj.setTitulo(item.getTitulo());
+                obj.setDescricao(item.getDescricao());
             }else{
                 Log.e("ItemDAO", "Falha em localizar o item id: " +item.getId());
             }
